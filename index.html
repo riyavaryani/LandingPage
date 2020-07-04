@@ -33,18 +33,20 @@
 	    <button class="follow"><img src="capture.PNG">Follow</button>
     </div>
     <div class="first3">
-    	<p>While many industries have been hit hard by COVID-19, some are on the rise. Here are ten roles that are in-demand today and the skills to help you land    <button>...see more</button></p>
+    	<p>While many industries have been hit hard by COVID-19, some are on the rise. Here are ten roles that are in-demand today and the skills to help you land   
+            <button id="buthide" type="button" onclick="see()">...see more</button></p>
+        <p id="hide">While many industries have been hit hard by COVID-19, some are on the rise. Here are ten roles that are in-demand today and the skills to help you land</p>
     </div>
     <img class="first4" src="main.jpg">
     <div class="first5">
     	<img style="padding-left: 7px;" src="like.PNG">
     	<img src="ins.PNG">
     	<img src="love.PNG">
-    	<span>759</span>
+    	<span id="like">759</span>
     	<span><li>11 Comments</li></span>
     </div>
     <div class="first6">
-    	<button><img style="padding-left: 12px;" src="likee.PNG"><span>Like</span></button>
+    	<button onclick="rps()"><img style="padding-left: 12px;" src="likee.PNG"><span>Like</span></button>
     	<button><img src="comment.PNG"><span>Comment<span></button>
     	<button><img src="share.PNG"><span>Share</span></button>
     	<button><img src="send.PNG"><span>Send</span></button>
@@ -63,16 +65,36 @@
     </div>
     <div class="first5">
     	<img style="padding-left: 7px;" src="like.PNG">
-    	<span>6</span>
+    	<span id="like2">6</span>
     	<span><li>8 Comments</li></span>
     </div>
     <div class="first6">
-    	<button><img style="padding-left: 12px;" src="likee.PNG"><span>Like</span></button>
+    	<button onclick="rps2()"><img style="padding-left: 12px;" src="likee.PNG"><span>Like</span></button>
     	<button><img src="comment.PNG"><span>Comment<span></button>
     	<button><img src="share.PNG"><span>Share</span></button>
     	<button><img src="send.PNG"><span>Send</span></button>
     </div>
 </div>
+
+<script>
+    function see(){
+        document.getElementById('hide').style.display = 'flex',
+        document.getElementById('buthide').style.display = 'none'
+    }
+    function rps() {
+    var like = document.getElementById('like');
+    var number = like.innerHTML;
+    number++;
+    like.innerHTML = number;
+}
+function rps2() {
+    var like = document.getElementById('like2');
+    var number = like.innerHTML;
+    number++;
+    like.innerHTML = number;
+}
+</script>
+
 
 <script src="https://kit.fontawesome.com/49b81f63fb.js" crossorigin="anonymous"></script>
 </body>
